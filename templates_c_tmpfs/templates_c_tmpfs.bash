@@ -10,6 +10,7 @@ WEBGID=$(id -g $WEBUSER)
 
 
 mkdir $TEMPLATES_C_PERSIST_DIR
+chown $WEBUSER:$WEBGROUP $TEMPLATES_C_PERSIST_DIR
 
 cat <<EOF > /usr/local/sbin/restoretemplate_c_cache
 #!/bin/bash
